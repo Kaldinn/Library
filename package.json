@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "csv": "^6.2.7"
+  },
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Library",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel&Damian",
+  "license": "ISC"
+}
