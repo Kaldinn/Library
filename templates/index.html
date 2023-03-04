@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Library</title>
 </head>
 <body>
-    <table>
+    <nav>
+        <div id="page-title">Library</div>
+        <div class="options">
+            <div class="nav-option"> Movies</div>
+            <div class="nav-option"> Books</div>
+            <div class="nav-option"> Anime</div>
+            <div class="nav-option"> BoardGames</div>
+            <div class="nav-option"> TV-Series</div>
+        </div>
+    </nav>
+    <div id="list">
     {% for book in books %}
-            <tr>
-                <td>{{book.title}}</td>
-                <td>{{book.authors}}</td> 
-                <td>{{book.publication_year}}</td> 
-                <td>{{book.image_url}}</td> 
-                <td>{{book.small_image_url}}</td> 
-            </tr>
+            <div class ="miniature">
+                <div class="img"><img src={{book.image_url}} /></div> 
+                <div class="title">{{book.title}}</div>
+                <!-- <div class="authors">{{book.authors}}</div> 
+                <div class="year">{{book.publication_year}}</div>  -->
+                <!-- <div class="small-img">{{book.small_image_url}}</div>  -->
+            </div>
     {% endfor %}
-    </table>
+    </div>
 </body>
 </html>

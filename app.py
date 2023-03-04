@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def books():
-    books = Book.get_all()[1:5]
+    books = Book.get_all()[0:100]
     return render_template("index.html", books = books)
 
 if __name__ == "__main__":
