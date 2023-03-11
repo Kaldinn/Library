@@ -18,16 +18,33 @@
             <div class="nav-option"> TV-Series</div>
         </div>
     </nav>
-    <div id="list">
-    {% for book in books %}
-            <div class ="miniature">
-                <div class="img"><img src={{book.image_url}} /></div> 
-                <div class="title">{{book.title}}</div>
-                <!-- <div class="authors">{{book.authors}}</div> 
-                <div class="year">{{book.publication_year}}</div>  -->
-                <!-- <div class="small-img">{{book.small_image_url}}</div>  -->
+    <div class="container">
+        <div class="sidebar">
+                <form action="/search" method="post">
+                    <input type="text" id="search" name="q" placeholder="Wpisz czego szukasz" required>
+                    <label>Biografia<input type="checkbox"></label>
+                    <label>Biznes<input type="checkbox"></label>
+                    <label>Dla dzieci<input type="checkbox"></label>
+                    <label>Historia<input type="checkbox"></label>
+                    <label>Informatyka<input type="checkbox"></label>
+                    <label>Kryminał<input type="checkbox"></label>
+                    <label>Literatura piękna Polska<input type="checkbox"></label>
+                    <label>Literatura piękna obca<input type="checkbox"></label>
+                    <label>Horror<input type="checkbox"></label>
+            
+                  </form>
+        </div>
+        <div id="list">
+            {% for book in books %}
+                    <div class ="miniature">
+                        <div class="img"><img src={{book.image_url}} /></div> 
+                        <div class="title">{{book.title}}</div>
+                        <!-- <div class="authors">{{book.authors}}</div> 
+                        <div class="year">{{book.publication_year}}</div>  -->
+                        <!-- <div class="small-img">{{book.small_image_url}}</div>  -->
+                    </div>
+            {% endfor %}
             </div>
-    {% endfor %}
     </div>
 </body>
 </html>
